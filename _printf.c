@@ -1,4 +1,7 @@
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include "main.h"
 
 /**
  * _printf - prints arguments in a specified order
@@ -23,10 +26,13 @@ int _printf(const char *format, ...)
 		value = write(1, &format[i], 1);
 		count = count + value;
 		i++;
+		continue;
 		}
+
 		if (format[i] == '%')
 		{
-			printf("Have hit a %\n");
+			printf("Have hit the percent sign\n");
+			//expressions;
 		}
 	}
 
