@@ -18,10 +18,10 @@ int main(void)
 	count_std = printf("Tester\n");
 	printf("I printed %d characters\n", count_std);
 
-	write(1, "_________________________\n", 25);
+	write(1,"_________________________\n",25);
 
 	write(1, "HOME_MADE:\n", 11);
-	count_hmd = _printf("Tester\n");
+	count_hmd = _printf("Test%er\n");
 	printf("I printed %d characters\n", count_hmd);
 
 	return (0);
