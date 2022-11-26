@@ -1,8 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
 int _printf(const char *format, ...);
-int(*check_specifier(char*))(va_list);
+int(*check_specifier(const char*))(va_list);
 
 /**
 struct func - struct for specifier to print
@@ -14,5 +19,9 @@ typedef struct func
 	char *t;
 	int (*f)(va_list);
 } func_t;
+
+int print_char(va_list);
+int print_str(va_list);
+int print_pcent(va_list);
 
 #endif
