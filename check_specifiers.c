@@ -12,8 +12,8 @@ int (*check_specifier(const char *format))(va_list)
 {
 	int i;
 
-	func_t my_array[4] = {{"c", print_char}, {"s", print_str},
-	{"%", print_pcent}, {NULL, NULL}};
+	func_t my_array[6] = {{"c", print_char}, {"s", print_str},
+	{"%", print_pcent}, {"i", print_int}, {"d", print_dec}, {NULL, NULL}};
 
 	for (i = 0; my_array[i].t != NULL; i++)
 	{
@@ -22,5 +22,6 @@ int (*check_specifier(const char *format))(va_list)
 			return (my_array[i].f);
 		}
 	}
+
 	return (NULL);
 }

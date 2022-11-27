@@ -23,5 +23,7 @@ typedef struct func
 int print_char(va_list);
 int print_str(va_list);
 int print_pcent(va_list);
+int print_int(va_list);
+int print_dec(va_list);
 
 #endif
